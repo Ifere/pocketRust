@@ -1,6 +1,6 @@
 run:
 	rustc main.rs
-	./main
+	./main 
 
 clean:
 	rm main
