@@ -78,7 +78,47 @@ This is why `const` is generally preferred when you just need a fixed value that
 //     println!("{} {}", pre, post);
 //     }
 
+// Functions 
+
+// fn factorial(num: u64) -> u64 {
+//     let mut result: u64 = 1;
+//     if num == 0 {
+//         println!("Base case reached");
+//         return 1;
+//     }
     
+//     result = num * factorial(num - 1);
+//     println!("{}", result);
+//     return result;
+// }
+
+// fn main() {
+
+//     println!("this is the answer -> {}", factorial(5));
+    
+// }
+
+
+
+// Closures 
+use std::env;
+fn main () {
+    let num = env::args().skip(1).next();
+    let mut x = 0;
+
+    match num {
+        Some(n) => {
+            match n.parse::<u64>() {
+                Ok(parsed_num) => x = parsed_num,
+                Err(_) => println!("Failed to parse '{}' as a number", n),
+            }
+        },
+        None => println!("No number provided"),
+    }
+    
+    let squared = |num: u64| num * num;
+    println!("{}", squared(x));
+}
 
 
 
