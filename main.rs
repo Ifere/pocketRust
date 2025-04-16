@@ -129,6 +129,20 @@ This is why `const` is generally preferred when you just need a fixed value that
 // I ran the command using {make run args="5"}   
 
 
+// STRINGS
+// fn main() {
+//     let q = "Hello, world!";
+//     let que: &str = "Hello, world!";
+//     let mut s = String::from("Hello, world!");
+//     s.push_str(", world!");
+//     println!("{}", s);
+//     println!("{}", que);
+//     println!("{}", q);  
+
+// }
+    
+
+
 
 
 
