@@ -101,24 +101,32 @@ This is why `const` is generally preferred when you just need a fixed value that
 
 
 // Closures 
-use std::env;
-fn main () {
-    let num = env::args().skip(1).next();
-    let mut x = 0;
+// use std::env;
+// fn main () {
+//     let num = env::args().skip(1).next();
+//     let mut x = 0;
 
-    match num {
-        Some(n) => {
-            match n.parse::<u64>() {
-                Ok(parsed_num) => x = parsed_num,
-                Err(_) => println!("Failed to parse '{}' as a number", n),
-            }
-        },
-        None => println!("No number provided"),
-    }
+//     match num {
+//         Some(n) => {
+//             match n.parse::<u64>() {
+//                 Ok(parsed_num) => x = parsed_num,
+//                 Err(_) => println!("Failed to parse '{}' as a number", n),
+//             }
+//         },
+//         None => println!("No number provided"),
+//     }
     
-    let squared = |num: u64| num * num;
-    println!("{}", squared(x));
-}
+//     let squared = |num: u64| num * num;
+//     println!("{}", squared(x));
+
+// }
+
+// fn main() {
+//     let money_doubler = |deposit: u64| deposit * 2;
+//     println!("{}", money_doubler(10));
+// }
+
+// I ran the command using {make run args="5"}   
 
 
 
